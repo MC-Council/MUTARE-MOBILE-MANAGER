@@ -1,6 +1,6 @@
 import logo from "./logo.png";
 import search_icon from "./search_icon.svg";
-import company_icon from "./company_icon.svg";
+import company_icon from "./company_icon.png";
 import microsoft_logo from "./microsoft_logo.svg";
 import samsung_logo from "./Samsung-Logo.svg";
 import huawei_logo from "./Huawei-Logo.svg";
@@ -39,6 +39,7 @@ import lenovo_logo from './Lenovo_Logo.svg'
 import sony_logo from './Sony-Logo.svg'
 import lg_logo from './LG_Electronics-Logo.svg'
 import toshiba_logo from './Toshiba-Logo.svg'
+import administrator_logo from './Administrator_logo.png'
 
 export const assets = {
     logo,
@@ -81,7 +82,8 @@ export const assets = {
     lenovo_logo,
     sony_logo,
     lg_logo,
-    toshiba_logo
+    toshiba_logo,
+    administrator_logo
 
 }
 
@@ -91,11 +93,13 @@ export const JobDepartments = [
     " Finance Department",
     " Eng. & Technical Services",
     " Health Department",
-    " Housing & Community Services"
+    " Housing & Community Services",
+    " Spacial Planning"
 ]
 
 export const JobLocations = [
     " Civic Center",
+    " Stores",
     " Sakubva",
     " Dangamvura",
     " Chikanga",
@@ -104,25 +108,31 @@ export const JobLocations = [
     " HobHouse"
 ]
 export const DeviceStorages = [
-    " 16GB",
-    " 32GB",
-    " 64GB",
-    " 128GB",
-    " 240GB",
-    " 320GB ",
+    " 16 GB",
+    " 32 GB",
+    " 64 GB",
+    " 128 GB",
+    " 240 GB",
+    " 256 GB",
+    " 320 GB ",
     " 512 GB",
     " 1TB",
-    " 2TB"
+    " 2TB",
+    " 4TB",
+    " None"
+
 
 ]
 export const DeviceMemorys = [
     " 4GB",
+    " 6GB",
     " 8GB",
     " 12GB",
     " 16GB",
     " 32GB",
     " 64GB ",
-    " 128GB "
+    " 128GB ",
+    " None"
 ]
 
 export const DeviceTypes =[
@@ -135,15 +145,35 @@ export const DeviceTypes =[
     "Scanner",
     "Router",
     "Switch",
-     "UPS",
+    "UPS",
     "Storage",
     "Other"
 ]
 
 // Sample data for Manage Jobs Page
 export const manageDevicesData = [
-    {  _id: 1, name: "Prince Mlambo", mm_no: '1235', title: 'iPhone 14 Pro Max',   type: 'Cellphone', SN: "670e4d25ca9fda8f1bf359b9", jobDepartment: "Chamber Secretary", location: "Civic Center", imgSrc: profile_img, returnApplicants:2 },
-    { _id: 2, name: "Misheck Mlambo", mm_no: '1234', title: 'SAMSUNG NOTE 20', type: 'Cellphone', SN: "670e4d25ca9fda8f1bf3g6h7y", jobDepartment: "Office of the Town Clerk", location: "Sakubva", imgSrc: profile_img, returnApplicants:3 },
+    {  _id: 1, 
+        name: "Prince Mlambo",
+        mm_no: '1235', 
+        corporate_email: "princem@mutarecity.org",
+        title: 'iPhone 14 Pro Max',   
+        type: 'Cellphone', 
+        SN:"670e4d25ca9fda8f1bf359b9", 
+        jobDepartment: "Chamber Secretary", 
+        location: "Civic Center", 
+        imgSrc: profile_img, 
+        returnApplicants:2 },
+    { _id: 2, 
+      name: "Misheck Mlambo", 
+     corporate_email: "misheckm@mutarecity.org",
+      mm_no: '1234', 
+      title: 'SAMSUNG NOTE 20', 
+      type: 'Cellphone', 
+      SN: "670e4d25ca9fda8f1bf3g6h7y", 
+      jobDepartment: "Office of the Town Clerk", 
+      location: "Sakubva", 
+      imgSrc: profile_img, 
+      returnApplicants:3 },
 ];
 
 // Sample data for Profile Page
@@ -190,6 +220,7 @@ export const devicesData = [
     {
         _id: '1',
         name: "Misheck Mlambo",
+        corporate_email:"misheckm@mutarecity.org",
         type: "Cellphone",
         location: " Sakubva",
         mm_no: "1234",
@@ -213,6 +244,7 @@ export const devicesData = [
     {
         _id: '2',
         name: "Prince Mlambo",
+        corporate_email:"princem@mutarecity.org",
         type: "Cellphone",
         location: " Civic Center",
         mm_no: "1235",

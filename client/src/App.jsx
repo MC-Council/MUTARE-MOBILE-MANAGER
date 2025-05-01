@@ -11,10 +11,12 @@ import Dashboard from './pages/Dashboard';
 import AddDevice from './pages/AddDevice';
 import 'quill/dist/quill.snow.css';
 
+import { ToastContainer, toast } from 'react-toastify';
+
 const App = () => {
 
 
-  const { showAdminLogin } = useContext(AppContext);
+  const { showAdminLogin, councilToken } = useContext(AppContext);
 
 
 
@@ -23,15 +25,20 @@ const App = () => {
   return (
     <div>
       {showAdminLogin && <AdminLogin />}
+      <ToastContainer/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/apply-device/:id" element={<ApplyDevice />} />
         <Route path="/applications" element={<Applications />} />
         <Route path='/dashboard' element={<Dashboard />}>
+        {councilToken ? <>
           <Route path='add-device' element={<AddDevice />} /> {/* No leading slash */}
           <Route path='manage-devices' element={<ManageDevices />} /> {/* No leading slash */}
           <Route path='view-applications' element={<ViewApplications />} /> {/* No leading slash */}
           <Route index element={<ManageDevices />} /> {/*If you want the dashboard page to render something by default when no child route is provided*/}
+        </> : null
+        }
+          
         </Route>
       </Routes>
     </div>

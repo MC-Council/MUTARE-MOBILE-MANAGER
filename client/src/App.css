@@ -40,3 +40,6 @@
 .read-the-docs {
   color: #888;
 }
+
+/* In your CSS file */
+.hover\:bg-red-600:hover { background-color: #dc2626; }

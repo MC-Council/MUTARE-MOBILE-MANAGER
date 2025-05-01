@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className='container px-4 mx-auto flex justify-between items-center'>
                 <div className="flex items-center">
                     <img  onClick={()=> navigate('/')} className='cursor-pointer w-14 h-14 mr-4' src={assets.logo} alt="logo"/>
-                    <h1 className="text-1.5xl font-bold">MUTARE MOBILE MANAGER</h1>
+                    <h1 className="text-1.5xl font-bold">MUTARE SMART DEVICES MANAGER</h1>
                     {
 
                         user

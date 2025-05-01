@@ -1,0 +1,15 @@
+ const fetchDevice = async () => {
+        try {
+            const { data } = await axios.get(`${backendUrl}/api/devices/${id}`);
+            
+            if (data.success) {
+                setDeviceData(data.device);
+            } else {
+                toast.error(data.message);
+                navigate('/apply-device/:id');
+            }
+        } catch (error) {
+            toast.error(error.response?.data?.message || 'Failed to fetch device details');
+            navigate('/apply-device/:id');
+        }
+    };

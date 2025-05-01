@@ -9,4 +9,4 @@ const connectDB = async () => {
     await mongoose.connect(`${process.env.MONGODB_URI}/mutarecitycouncil`)
 }
 
-export default connectDB
+export default connectDB 

@@ -12,6 +12,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@clerk/backend": "^1.30.2",
+    "@clerk/clerk-react": "^4.26.1",
+    "@clerk/clerk-sdk-node": "^4.13.1",
+    "@clerk/express": "^1.4.11",
     "@sentry/node": "^9.1.0",
     "@sentry/profiling-node": "^9.1.0",
     "bcrypt": "^5.1.1",
@@ -20,8 +24,10 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.10.1",
+    "mongodb": "^6.14.2",
+    "mongoose": "^8.12.1",
     "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.10.1",
     "nodemon": "^3.1.9",
     "svix": "^1.57.0"
   }
